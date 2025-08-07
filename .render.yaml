@@ -2,11 +2,9 @@ services:
   - type: web
     name: n8n
     env: docker
-    repo: https://github.com/Maksimplyt/n8n
-    branch: master
-    region: frankfurt
+    image: n8nio/n8n:latest
     plan: free
-    dockerfilePath: docker/images/n8n/Dockerfile
+    region: frankfurt
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
@@ -19,4 +17,4 @@ services:
       - key: N8N_PORT
         value: "5678"
       - key: WEBHOOK_URL
-        value: https://n8n.maksimbot.com/
+        value: https://n8n.onrender.com/
